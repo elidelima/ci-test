@@ -1,12 +1,13 @@
 package main
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/stretchr/testify/assert"
+)
 
 func TestSoma(t *testing.T) {
 
-	total := Soma(15, 15)
-
-	if total != 30 {
-		t.Errorf("Resultado da some é inválido: Resultado %d. Esperado: %d", total, 30)
-	}
+	total := soma(15, 15)
+	assert.Equal(t, 30, total)
 }
